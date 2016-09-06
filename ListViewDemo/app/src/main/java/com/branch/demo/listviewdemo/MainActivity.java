@@ -21,11 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listview = (ListView) findViewById(R.id.listView);
 
+        /**
+         * 样式1
+         */
 //        listview.setAdapter(
-//                new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, getData())
+//                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getData())
 //        );
 
-
+        /**
+         * 样式2
+         */
         SimpleAdapter adapter = new SimpleAdapter(this, getMapData(),
                 android.R.layout.simple_list_item_2, new String[] { "txt1",
                 "txt2" }, new int[] { android.R.id.text1,
@@ -34,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 样式1的数据源
+     * @return
+     */
     private List<String> getData(){
 
         List<String> data = new ArrayList<String>();
@@ -45,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         return data;
     }
 
+    /**
+     * 样式2的数据源
+     * @return
+     */
     private ArrayList<Map<String, String>> getMapData(){
 
         ArrayList<Map<String, String>> data = new ArrayList<>();
