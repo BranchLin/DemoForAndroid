@@ -2,6 +2,9 @@ package com.branch.demo.listviewdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -36,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 "txt2" }, new int[] { android.R.id.text1,
                 android.R.id.text2 });
         listview.setAdapter(adapter);
+
+        /**
+         * 事件响应
+         */
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("Branch","OnItemClickListener position:"+position+" id:"+id);
+            }
+        });
 
     }
 
