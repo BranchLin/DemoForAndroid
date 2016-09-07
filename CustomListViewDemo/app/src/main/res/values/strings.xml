@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CustomListViewDemo</string>
+    <string name="txt_btn">按钮</string>
+    <string name="des_img">img</string>
+</resources>
